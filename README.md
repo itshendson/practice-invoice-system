@@ -12,6 +12,8 @@ The result is then sent back to the front end.
 
 The front end then displays the text on the screen.
 
+This practice project does NOT use a database.
+
 # technology
 JavaScript
 Node.js
