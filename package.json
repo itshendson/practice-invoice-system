@@ -1,0 +1,20 @@
+{
+  "name": "invoice-system",
+  "version": "1.0.0",
+  "description": "mini project to learn and practice form and express",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Hendson Szeto",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "fetch": "^1.1.0",
+    "node-fetch": "^3.2.0",
+    "nodemon": "^2.0.15"
+  },
+  "proxy": "http://localhost:3000/"
+}
