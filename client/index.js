@@ -6,7 +6,7 @@ let resultField = document.getElementById('result-container');
 const submitBtn = document.getElementById('form-button');
 
 onSubmitButtonClick = async () => {
-    let invoiceDataUrl = `http://localhost:3000/server/${firstName.value},${lastName.value},${item.value},${price.value}`;
+    let invoiceDataUrl = `http://localhost:3000/submit/${firstName.value},${lastName.value},${item.value},${price.value}`;
     let options = {
         method: 'POST'
     }
