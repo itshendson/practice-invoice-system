@@ -17,6 +17,9 @@ onSubmitButtonClick = async () => {
 
     resultField.innerHTML = `${responseJson[0]}, ${responseJson[1]}, ${responseJson[2]}, ${responseJson[3]}`;   
     firstName.value = "";
+    lastName.value = "";
+    item.value = "";
+    price.value = "";
 }
 
 submitBtn.addEventListener("click", onSubmitButtonClick);
