@@ -3,7 +3,7 @@ const route = express.Router();
 
 const controller = require('../controller/controller');
 
-route.post('/:data', (req, res) => {
+route.post('/submit/:data', (req, res) => {
     let invoiceData = req.params.data.split(',');
     let invoiceProcessed = [];
     for (let i = 0; i < invoiceData.length; i++) {
@@ -14,5 +14,9 @@ route.post('/:data', (req, res) => {
 })
 
 route.post('/api/items', controller.create);
+
+route.get('/api/items', controller.find);
+
+route.delete('/api/items/:id', controller.delete);
 
 module.exports = route;

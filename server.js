@@ -20,7 +20,7 @@ connectDatabase();
 /**
  * Load Endpoints
  */
-app.use('/submit', require('./routes/submit.js'));
+app.use('/', require('./routes/submit.js'));
 
 /**
  * Listen on Port
