@@ -1,6 +1,8 @@
 const express = require('express');
 const route = express.Router();
 
+const controller = require('../controller/controller');
+
 route.post('/:data', (req, res) => {
     let invoiceData = req.params.data.split(',');
     let invoiceProcessed = [];
@@ -10,5 +12,7 @@ route.post('/:data', (req, res) => {
     // Push to database
     res.json(invoiceProcessed);
 })
+
+route.post('/api/items', controller.create);
 
 module.exports = route;
