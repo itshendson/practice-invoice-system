@@ -24,18 +24,26 @@ exports.create = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: err.message || "An error occurred while creating attempt to create item."
+                message: err.message || "An error occurred while attempting to create item."
             });
         })
 }
 
 // retrieve and return all item(s)
 exports.find = (req, res) => {
-
+    Itemdb.find()
+    .then(data => {
+        res.send(data);
+    })
+    .catch(err => {
+        res.status(500).send({
+            message : err.message || "An error occurred while attempting to retrieve item."
+        })
+    })
 }
 
 // Delete an item by Item ID
 exports.delete = (req, res) => {
-
+    // Implement this.
 }
 
